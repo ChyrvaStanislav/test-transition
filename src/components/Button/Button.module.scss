@@ -1,0 +1,56 @@
+@keyframes headShake {
+  0% {
+    transform: translateX(0);
+  }
+
+  2.5% {
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+
+  4.5% {
+    transform: translateX(5px) rotateY(7deg);
+  }
+
+  7.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+
+  10.5% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+
+  13% {
+    transform: translateX(0);
+  }
+}
+
+
+.button {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: unset;
+  border-radius: 50%;
+  background: dodgerblue;
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  cursor: pointer;
+  animation: headShake 4s ease-in-out infinite;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, .7);
+  z-index: 5;
+
+  &:hover {
+    filter: brightness(1.1);
+    animation: none;
+  }
+}
+
